@@ -1,5 +1,5 @@
 {
-	"name": "aicommits",
+	"name": "aicommits-modified",
 	"version": "0.0.0-semantic-release",
 	"description": "Writes your git commit messages for you with AI",
 	"keywords": [
@@ -8,15 +8,18 @@
 		"commit"
 	],
 	"license": "MIT",
-	"repository": "Nutlope/aicommits",
+	"repository": "SpecialAgency-Chat/aicommits-modified",
 	"author": "Hassan El Mghari (@nutlope)",
+	"contributors": [
+		"waki285 <suzuneu@suzuneu.com>"
+	],
 	"type": "module",
 	"files": [
 		"dist"
 	],
 	"bin": {
-		"aicommits": "./dist/cli.mjs",
-		"aic": "./dist/cli.mjs"
+		"aicommitsm": "./dist/cli.mjs",
+		"aim": "./dist/cli.mjs"
 	},
 	"scripts": {
 		"prepare": "simple-git-hooks",
@@ -60,7 +63,8 @@
 	"eslintConfig": {
 		"extends": "@pvtnbr",
 		"rules": {
-			"unicorn/no-process-exit": "off"
+			"unicorn/no-process-exit": "off",
+			"complexity": "off"
 		},
 		"overrides": [
 			{
