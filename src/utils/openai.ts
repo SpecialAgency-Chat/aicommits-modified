@@ -127,11 +127,13 @@ export const generateCommitMessage = async (
 	model: TiktokenModel,
 	locale: string,
 	diff: string,
+	bgInfo: string,
 	completions: number,
 	maxLength: number,
 	type: CommitType,
 	timeout: number,
 	proxy?: string,
+// eslint-disable-next-line max-params
 ) => {
 	try {
 		const completion = await createChatCompletion(
@@ -141,7 +143,7 @@ export const generateCommitMessage = async (
 				messages: [
 					{
 						role: 'system',
-						content: generatePrompt(locale, maxLength, type),
+						content: generatePrompt(locale, maxLength, type, bgInfo),
 					},
 					{
 						role: 'user',
