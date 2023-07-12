@@ -63,8 +63,7 @@
 	"eslintConfig": {
 		"extends": "@pvtnbr",
 		"rules": {
-			"unicorn/no-process-exit": "off",
-			"complexity": "off"
+			"unicorn/no-process-exit": "off"
 		},
 		"overrides": [
 			{
