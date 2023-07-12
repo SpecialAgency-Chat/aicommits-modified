@@ -1,7 +1,7 @@
 <div align="center">
   <div>
     <img src=".github/screenshot.png" alt="AI Commits"/>
-    <h1 align="center">AI Commits</h1>
+    <h1 align="center">AI Commits Modified</h1>
   </div>
 	<p>A CLI that writes your git commit messages for you with AI. Never write a commit message again.</p>
 	<a href="https://www.npmjs.com/package/aicommits"><img src="https://img.shields.io/npm/v/aicommits" alt="Current version"></a>
@@ -17,7 +17,7 @@
 1. Install _aicommits_:
 
     ```sh
-    npm install -g aicommits
+    npm install -g aicommits-modified
     ```
 
 2. Retrieve your API key from [OpenAI](https://platform.openai.com/account/api-keys)
@@ -27,7 +27,7 @@
 3. Set the key so aicommits can use it:
 
     ```sh
-    aicommits config set OPENAI_KEY=<your token>
+    aim config set OPENAI_KEY=<your token>
     ```
 
     This will create a `.aicommits` file in your home directory.
@@ -37,10 +37,10 @@
 
 Check the installed version with:
 ```
-aicommits --version
+aim --version
 ```
 
-If it's not the [latest version](https://github.com/Nutlope/aicommits/releases/latest), run:
+If it's not the [latest version](https://github.com/SpecialAgency-Chat/aicommits-modified/releases/latest), run:
 
 ```sh
 npm update -g aicommits
@@ -49,21 +49,19 @@ npm update -g aicommits
 ## Usage
 ### CLI mode
 
-You can call `aicommits` directly to generate a commit message for your staged changes:
+You can call `aim` directly to generate a commit message for your staged changes:
 
 ```sh
 git add <files...>
-aicommits
+aim
 ```
 
-`aicommits` passes down unknown flags to `git commit`, so you can pass in [`commit` flags](https://git-scm.com/docs/git-commit).
+`aim` passes down unknown flags to `git commit`, so you can pass in [`commit` flags](https://git-scm.com/docs/git-commit).
 
 For example, you can stage all changes in tracked files with as you commit:
 ```sh
-aicommits --all # or -a
+aim --all # or -a
 ```
-
-> 👉 **Tip:** Use the `aic` alias if `aicommits` is too long for you.
 
 #### Generate multiple recommendations
 
